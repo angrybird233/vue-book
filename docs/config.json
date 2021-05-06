@@ -1,0 +1,505 @@
+[
+  {
+    "path": "front",
+    "title": "pc和h5端",
+    "children": [
+      {
+        "path": "login",
+        "title": "登录",
+        "children": [
+          {
+            "path": "h5",
+            "title": "h5登录"
+          }
+        ]
+      },
+      {
+        "path": "shopmall",
+        "title": "企业积分商城模块",
+        "children": [
+          {
+            "path": "order",
+            "title": "订单模块"
+          },
+          {
+            "path": "address",
+            "title": "地址管理"
+          },
+          {
+            "path": "homepage",
+            "title": "首页配置"
+          },
+          {
+            "path": "goods",
+            "title": "商品"
+          },
+          {
+            "path": "cart",
+            "title": "购物车"
+          },
+          {
+            "path": "my",
+            "title": "我的积分"
+          }
+        ]
+      },
+      {
+        "path": "curing",
+        "title": "精养",
+        "children": [
+          {
+            "path": "work",
+            "title": "工单模块"
+          }
+        ]
+      },
+      {
+        "path": "dealer",
+        "title": "经销商人员管理应用",
+        "children": [
+          {
+            "path": "dealer",
+            "title": "经销商"
+          },
+          {
+            "path": "member",
+            "title": "经销商人员"
+          }
+        ]
+      },
+      {
+        "path": "storeAuth",
+        "title": "门店认证",
+        "children": [
+          {
+            "path": "storeAuth",
+            "title": "门店认证"
+          }
+        ]
+      },
+      {
+        "path": "resource",
+        "title": "资源申请",
+        "children": [
+          {
+            "path": "apply",
+            "title": "资源申请"
+          },
+          {
+            "path": "cateConfig",
+            "title": "分类推荐"
+          },
+          {
+            "path": "order",
+            "title": "订单"
+          },
+          {
+            "path": "resource",
+            "title": "资源"
+          },
+          {
+            "path": "resourceShopGoods",
+            "title": "资源商城商品"
+          },
+          {
+            "path": "introduce",
+            "title": "资源介绍"
+          },
+          {
+            "path": "banner",
+            "title": "首页运营轮播图"
+          },
+          {
+            "path": "myClients",
+            "title": "我的客户"
+          },
+          {
+            "path": "news",
+            "title": "消息"
+          },
+          {
+            "path": "address",
+            "title": "地址"
+          },
+          {
+            "path": "common",
+            "title": "公共"
+          }
+        ]
+      },
+      {
+        "path": "common",
+        "title": "公共文档",
+        "children": [
+          {
+            "path": "common",
+            "title": "公共"
+          }
+        ]
+      },
+      {
+        "path": "invitation",
+        "title": "超凡邀约",
+        "children": [
+          {
+            "path": "live",
+            "title": "直播列表"
+          },
+          {
+            "path": "orderTarget",
+            "title": "目标下单量设置"
+          },
+          {
+            "path": "liveH5",
+            "title": "直播下单量"
+          }
+        ]
+      },
+      {
+        "path": "shop",
+        "title": "商城",
+        "children": [
+          {
+            "path": "address",
+            "title": "地址"
+          },
+          {
+            "path": "cart",
+            "title": "购物车"
+          },
+          {
+            "path": "goods",
+            "title": "商品"
+          },
+          {
+            "path": "order",
+            "title": "订单"
+          }
+        ]
+      },
+      {
+        "path": "shopCustomize",
+        "title": "商城自定义",
+        "children": [
+          {
+            "path": "homepage",
+            "title": "首页"
+          }
+        ]
+      },
+      {
+        "path": "integralRule",
+        "title": "积分规则及数据仓库",
+        "children": [
+          {
+            "path": "my",
+            "title": "我的积分"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "admin",
+    "title": "管理后台",
+    "children": [
+      {
+        "path": "dealerArchivesB2C",
+        "title": "经销商档案",
+        "children": [
+          {
+            "path": "onlooker",
+            "title": "旁观者管理"
+          },
+          {
+            "path": "dealer",
+            "title": "经销商管理"
+          },
+          {
+            "path": "personnel",
+            "title": "经销商人员"
+          },
+          {
+            "path": "job",
+            "title": "销售岗位管理"
+          },
+          {
+            "path": "station",
+            "title": "经销商岗位管理"
+          },
+          {
+            "path": "invoice",
+            "title": "经销商发票管理"
+          }
+        ]
+      },
+      {
+        "path": "memberManagement",
+        "title": "通讯录管理",
+        "children": [
+          {
+            "path": "department",
+            "title": "组织管理"
+          },
+          {
+            "path": "member",
+            "title": "员工管理"
+          },
+          {
+            "path": "attribute",
+            "title": "员工属性"
+          },
+          {
+            "path": "job",
+            "title": "岗位管理"
+          },
+          {
+            "path": "role",
+            "title": "角色管理"
+          },
+          {
+            "path": "homePage",
+            "title": "个人主页管理"
+          },
+          {
+            "path": "syncUser",
+            "title": "同步通讯录"
+          },
+          {
+            "path": "setting",
+            "title": "设置"
+          }
+        ]
+      },
+      {
+        "path": "admin",
+        "title": "管理员与登录",
+        "children": [
+          {
+            "path": "common",
+            "title": "公共接口"
+          },
+          {
+            "path": "downloadCenter",
+            "title": "下载中心"
+          },
+          {
+            "path": "ucApp",
+            "title": "uc应用管理"
+          },
+          {
+            "path": "user",
+            "title": "管理员管理"
+          },
+          {
+            "path": "forgetPwd",
+            "title": "忘记密码"
+          },
+          {
+            "path": "login",
+            "title": "登录"
+          },
+          {
+            "path": "role",
+            "title": "角色"
+          },
+          {
+            "path": "enterprise",
+            "title": "企业管理"
+          },
+          {
+            "path": "chooseMem",
+            "title": "通用选择"
+          },
+          {
+            "path": "white",
+            "title": "白名单"
+          }
+        ]
+      },
+      {
+        "path": "storeAuth",
+        "title": "门店认证",
+        "children": [
+          {
+            "path": "storeAuth",
+            "title": "门店认证"
+          }
+        ]
+      },
+      {
+        "path": "resource",
+        "title": "资源申请",
+        "children": [
+          {
+            "path": "common",
+            "title": "公共"
+          },
+          {
+            "path": "apply",
+            "title": "资源申请"
+          },
+          {
+            "path": "budget",
+            "title": "预算方案"
+          },
+          {
+            "path": "cateRecommend",
+            "title": "分类推荐"
+          },
+          {
+            "path": "goods",
+            "title": "商品管理"
+          },
+          {
+            "path": "group",
+            "title": "客户分组"
+          },
+          {
+            "path": "order",
+            "title": "订单管理"
+          },
+          {
+            "path": "resource",
+            "title": "资源库"
+          },
+          {
+            "path": "resourceAuditAuthority",
+            "title": "资源审核配置"
+          },
+          {
+            "path": "resourceClass",
+            "title": "资源分类"
+          },
+          {
+            "path": "resourceShop",
+            "title": "资源商城"
+          },
+          {
+            "path": "rsmBudget",
+            "title": "RSM预算池"
+          },
+          {
+            "path": "supplier",
+            "title": "供应商"
+          },
+          {
+            "path": "banner",
+            "title": "轮播图管理"
+          },
+          {
+            "path": "introduce",
+            "title": "资源介绍"
+          }
+        ]
+      },
+      {
+        "path": "invitation",
+        "title": "超凡邀约",
+        "children": [
+          {
+            "path": "task",
+            "title": "任务列表"
+          },
+          {
+            "path": "live",
+            "title": "直播列表"
+          },
+          {
+            "path": "orderTarget",
+            "title": "目标下单量设置"
+          },
+          {
+            "path": "activity",
+            "title": "活动列表"
+          },
+          {
+            "path": "activityData",
+            "title": "活动数据列表"
+          }
+        ]
+      },
+      {
+        "path": "shopCustomize",
+        "title": "商城自定义",
+        "children": [
+          {
+            "path": "goodsGroup",
+            "title": "商品组"
+          },
+          {
+            "path": "banner",
+            "title": "banner配置"
+          },
+          {
+            "path": "recommendClass",
+            "title": "分类推荐"
+          },
+          {
+            "path": "zone",
+            "title": "专区配置"
+          }
+        ]
+      },
+      {
+        "path": "shop",
+        "title": "商城及订单",
+        "children": [
+          {
+            "path": "order",
+            "title": "订单"
+          },
+          {
+            "path": "shop",
+            "title": "商城"
+          }
+        ]
+      },
+      {
+        "path": "integralRule",
+        "title": "积分规则及数据仓库",
+        "children": [
+          {
+            "path": "rule",
+            "title": "积分规则"
+          },
+          {
+            "path": "warehouse",
+            "title": "数据仓库"
+          },
+          {
+            "path": "standingPo",
+            "title": "standingPo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "openApi",
+    "title": "外部对接",
+    "children": [
+      {
+        "path": "storeAuth",
+        "title": "门店认证",
+        "children": [
+          {
+            "path": "storeAuth",
+            "title": "门店认证"
+          }
+        ]
+      },
+      {
+        "path": "openDealer",
+        "title": "经销商人员",
+        "children": [
+          {
+            "path": "openPersonnel",
+            "title": "经销商人员"
+          }
+        ]
+      }
+
+    ]
+  }
+]

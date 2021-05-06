@@ -1,0 +1,20 @@
+{
+  "name": "vuepress-starter",
+  "version": "1.0.0",
+  "description": "vuepress",
+  "main": "index.js",
+  "author": "wanggang",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.8.2"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "dependencies": {
+    "vdoing": "^1.0.3",
+    "vuepress-bar": "^0.3.6",
+    "vuepress-plugin-permalink-pinyin": "^1.0.0"
+  }
+}

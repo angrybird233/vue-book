@@ -1,0 +1,109 @@
+#!groovy
+
+// 参数配置
+properties([
+        parameters([
+                choice(
+                        name: 'Profile_Hosts',
+                        choices: """
+                                development: 42.159.159.9
+                                """,
+                        description: '发布环境和服务器'),
+                choice(
+                        name: 'Profile_Dir',
+                        choices: """
+                                development:/data2/wwwroot/smartpal2-dev.vchangyi.com/api
+                                """,
+                        description: '发布目录'),
+                choice(
+                        name: 'Deploy_Auth',
+                        choices: """
+                                development:www
+                                """,
+                        description: '发布权限'),         
+                choice(
+                        name: 'Branch',
+                        choices: """
+                                master
+                                """,
+                        description: ''
+                )
+        ])
+])
+
+node('') {
+    nodejs('node14') {
+
+    def Profile_Hosts = params.Profile_Hosts.trim().split(":")
+    def Profile = Profile_Hosts[0].split("-")[0].trim()
+    def Hosts = Profile_Hosts[1].trim().split(",")
+    def Profile_Dir = params.Profile_Dir.trim().split(":")
+    def Dir = Profile_Dir[1].trim()
+    
+    def Deploy_Auths_All = params.Deploy_Auth.trim().split(":")
+    def Deploy_Auths = Deploy_Auths_All[1].trim().split(",")
+
+    currentBuild.displayName = "${USER} 发布 ${Profile}"
+
+    // 发布工程：${Projects}
+    currentBuild.description = """ 
+        发布分支：${params.Tag} ${params.Branch}
+        发布环境：${Profile}
+        发布主机：${Hosts}
+        发布目录：${Dir}
+    """
+
+    stage('SCM') {
+        checkout([
+                $class                           : 'GitSCM',
+                branches                         : [[name: "${params.Branch}"]],
+                doGenerateSubmoduleConfigurations: false,
+                extensions                       : [],
+                submoduleCfg                     : [],
+                userRemoteConfigs                : [[url: 'ssh://git@gitlab-ce.k8s.tools.vchangyi.com:32201/shell/smartpal/frontend/smartpal-management-restructure.git']]
+        ])
+        // git scm
+    }
+
+    stage('SonarQube analysis') {
+        if(Profile == 'production') {
+            echo "生产环境发布，跳过 sonar 质量检测"
+        } 
+    }
+
+    stage ("SonarQube Quality Gate") {
+        if(Profile == 'production') {
+            echo "生产环境发布，跳过 sonar 质量阈检测"
+        }
+    }
+
+    stage("clean workspace") {
+        sh """
+        """
+    }
+
+    stage("build") {
+        sh """
+            pwd
+            ls
+            yarn -v
+            yarn install
+            yarn build --mode ${Profile}
+            tar -czvf dist.tar.gz ROOT
+        """
+    }
+
+    stage("deploy") {
+        def deploys = [:]
+        for (int i = 0; i < Hosts.size(); i++) {
+            def index_host = i
+            def host = Hosts[index_host]
+            def auth = Deploy_Auths[index_host] 
+            deploys["deploy-task-${host}"] = {
+                sh "bash -x jenkins/deploy.sh '${host}' '${Dir}' '${Profile}' '${auth}'"
+            }
+        }
+        parallel deploys
+    }
+    }
+}
